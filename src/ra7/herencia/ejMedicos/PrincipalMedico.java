@@ -18,15 +18,15 @@ public class PrincipalMedico {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        Vector vectorMedico = new Vector();
-        vectorMedico.add(new Ortopedista(TipoOrtopedista.PEDIATRICA, "Luis"));
-        vectorMedico.add(new Pediatra(TipoPediatra.NEUROLOGO, "Elena"));
-        vectorMedico.add(new Pediatra(TipoPediatra.NEUROLOGO, "Juana"));
-        vectorMedico.add(new Ortopedista(TipoOrtopedista.PEDIATRICA, "Paco"));
-        vectorMedico.add(new Ortopedista(TipoOrtopedista.MAXILOFACIAL, "Alejandro"));
+        Vector<Medico> medicos = new Vector<>();
+        medicos.add(new Ortopedista(TipoOrtopedista.PEDIATRICA, "Luis"));
+        medicos.add(new Pediatra(TipoPediatra.NEUROLOGO, "Elena"));
+        medicos.add(new Pediatra(TipoPediatra.NEUROLOGO, "Juana"));
+        medicos.add(new Ortopedista(TipoOrtopedista.PEDIATRICA, "Paco"));
+        medicos.add(new Ortopedista(TipoOrtopedista.MAXILOFACIAL, "Alejandro"));
 
         int posicion = 0;
-        for (var m : vectorMedico) {
+        for (Medico m : medicos) {
             if (m instanceof Ortopedista) {
                 System.out.println("Ortopedista, posicion: " + posicion);
                 //((Ortopedista) m).mostrarInfo();
