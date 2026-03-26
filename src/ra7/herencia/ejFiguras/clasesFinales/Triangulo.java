@@ -15,17 +15,18 @@ public class Triangulo extends Figura {
     private int a;
     private int b;
     private int c;
+    private int altura;
 
     //Constructor
-    public Triangulo(int a, int b, int c, String color) {
+
+    public Triangulo(int a, int b, int c, int altura, String color) {
         super(color);
         this.a = a;
         this.b = b;
         this.c = c;
+        this.altura = altura;
     }
-
-    //Getter and Setter
-    public int getA() {
+    public int getA() {    
         return a;
     }
 
@@ -49,12 +50,20 @@ public class Triangulo extends Figura {
         this.c = c;
     }
 
+    public int getAltura() {
+        return altura;
+    }
+
+    //Getter and Setter
+    public void setAltura(int altura) {    
+        this.altura = altura;
+    }
+
     //Metodos
     @Override
     public double calcularArea() {
-        double s = (a + b + c) / 2.0;
-        double area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
-        return area;
+        
+        return (c*altura)/2;
     }
 
     @Override

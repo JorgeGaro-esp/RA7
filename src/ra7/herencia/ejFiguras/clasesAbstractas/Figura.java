@@ -30,20 +30,36 @@ public abstract class Figura {
         System.out.println("El color del " + this.getClass().getSimpleName() + " es: " + color);
     }
 
-    public void mostrarInfo(){
+    public void mostrarInfo() {
         System.out.println(this.getClass().getSimpleName());
         System.out.println("Area: " + calcularArea());
         System.out.println("Perimetro: " + calcularPerimetro());
         mostrarColor();
         System.out.println("¿La figura es grande? (>50): " + esGrande());
     }
-    public boolean esGrande(){
-        if (calcularArea()>50) {
+
+    public boolean esGrande() {
+        if (calcularArea() > 50) {
             return true;
-        } else return false;
+        } else {
+            return false;
+        }
     }
+
+    public void esMayor(Figura f) {
+        if (this.calcularArea() > f.calcularArea()) {
+            System.out.println("El " + this.getClass().getSimpleName());
+        }
+        if (f.calcularArea() > this.calcularArea()) {
+            System.out.println("El " + f.getClass().getSimpleName());
+        } else {
+            System.out.println("Son iguales");
+        }
+    }
+
     //Abstracto
     public abstract double calcularArea();
+
     public abstract double calcularPerimetro();
 
 }

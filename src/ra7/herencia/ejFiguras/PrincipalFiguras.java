@@ -10,6 +10,7 @@ import ra7.herencia.ejFiguras.clasesFinales.Triangulo;
 import ra7.herencia.ejFiguras.clasesFinales.Circulo;
 import ra7.herencia.ejFiguras.clasesFinales.Rectangulo;
 import java.util.ArrayList;
+import ra7.herencia.ejFiguras.clasesFinales.Hexagono;
 
 /**
  *
@@ -23,15 +24,21 @@ public class PrincipalFiguras {
     public static void main(String[] args) {
         // TODO code application logic here
         ArrayList<Figura> figuras = new ArrayList<>();
-        figuras.add(new Circulo(4,"Rojo"));
-        figuras.add(new Rectangulo(2,4,"Azul"));
-        figuras.add(new Triangulo(1,2,3,"Amarillo"));
+        figuras.add(new Circulo(4, "Rojo"));
+        figuras.add(new Rectangulo(2, 4, "Azul"));
+        figuras.add(new Triangulo(4, 2, 1,3, "Amarillo"));
         figuras.add(new Trapecio(2, 4, 3, 3, 1, "Verde"));
+        figuras.add(new Hexagono(4, "Morado"));
+        
+        Rectangulo r1 = new Rectangulo(1, 2, "Blanco");
         
         for (Figura figura : figuras) {
             figura.mostrarInfo();
+            figura.esMayor(r1);
             System.out.println("");
+            
         }
+        
     }
     
 }
