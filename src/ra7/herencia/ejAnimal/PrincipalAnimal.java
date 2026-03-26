@@ -4,6 +4,7 @@
  */
 package ra7.herencia.ejAnimal;
 
+import java.util.ArrayList;
 import java.util.Vector;
 import ra7.herencia.ejAnimal.clasesAbstractas.Animal;
 import ra7.herencia.ejAnimal.clasesFinales.Gato;
@@ -22,7 +23,7 @@ public class PrincipalAnimal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Vector<Animal> animales = new Vector<>();
+        ArrayList<Animal> animales = new ArrayList<>();
         animales.add(new Gato("","","",""));
         animales.add(new Lobo("","","",""));
         animales.add(new Leon("","","",""));

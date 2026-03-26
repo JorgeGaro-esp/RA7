@@ -40,7 +40,7 @@ public abstract class Animal {
         this.alimentos = alimentos;
     }
 
-    public void setHabitat(String habitat) {
+    public void setHabitat(String habitat) {    
         this.habitat = habitat;
     }
 
